@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenComply</title>
+  <meta name="description" content="Free, open-source SOC 2 readiness workspace: controls, evidence, policies, risks, vendors and people. Runs entirely in your browser.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7z' fill='%231f6f54'/%3E%3Cpath d='m10.5 16 4 4 7-8' stroke='%23fff' stroke-width='3' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#/">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 2 4 7v8c0 7.5 5.1 13.4 12 15 6.9-1.6 12-7.5 12-15V7z" class="brand-shield"/><path d="m10.5 16 4 4 7-8" class="brand-check"/></svg>
+        <span>OpenComply</span>
+      </a>
+      <nav class="nav" id="nav">
+        <a href="#/" data-route="dashboard">Overview</a>
+        <a href="#/controls" data-route="controls">Controls</a>
+        <a href="#/policies" data-route="policies">Policies</a>
+        <a href="#/risks" data-route="risks">Risks</a>
+        <a href="#/vendors" data-route="vendors">Vendors</a>
+        <a href="#/people" data-route="people">People</a>
+        <a href="#/report" data-route="report">Report</a>
+        <a href="#/settings" data-route="settings">Settings</a>
+      </nav>
+      <p class="sidebar-foot">Your data stays in this browser. Export a backup from Settings.</p>
+    </aside>
+    <main class="main" id="app" tabindex="-1"></main>
+  </div>
+
+  <dialog id="dialog" class="dialog">
+    <form method="dialog" id="dialog-form">
+      <header class="dialog-head">
+        <h2 id="dialog-title"></h2>
+        <button type="button" class="icon-btn" data-close aria-label="Close">&times;</button>
+      </header>
+      <div class="dialog-body" id="dialog-body"></div>
+      <footer class="dialog-foot" id="dialog-foot"></footer>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
